@@ -35,7 +35,7 @@ namespace sxBackEnd.db
             var dateTimeConverter = new Newtonsoft.Json.Converters.IsoDateTimeConverter { DateTimeFormat = format };
 
             Members = new List<Member>();
-            Members = JsonConvert.DeserializeObject<List<Member>>(File.ReadAllText($@"{path}\db\MOCK_DATA.json"), dateTimeConverter);
+            Members = JsonConvert.DeserializeObject<List<Member>>(File.ReadAllText($@"{path}/db/MOCK_DATA.json"), dateTimeConverter);
         }
     }
 }
